@@ -1,14 +1,14 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    text-transform: uppercase;
+    box-sizing: border-box;    
 }
 
 body {
     font-family: Verdana, sans-serif;
     font-size: 16px;
     padding-top: 40px;
+    text-transform: uppercase;
 }
 
 .header-home {
@@ -19,6 +19,8 @@ body {
     margin: .5%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+
 }
 
 .header-home .logo {
@@ -41,21 +43,27 @@ body {
 .header-home .nav,
 .header-paginas .nav {
     display: flex;
-    top: 0;
+    top: 4px;
     position: fixed;
     background-color: black;
-    width: 99%;
+    width: 99.02%;
 }
 
-.nav ul {
+.menu  {
+   display: flex;
+   flex: auto;
+   flex-wrap: wrap;
+   flex-direction: row;
+   align-items:flex-start;
+   justify-content: space-around;
+   list-style: none; 
+}
+
+.nav {
     display: flex;
     flex: auto;
     flex-wrap: wrap;
     list-style: none;
-}
-
-.nav ul li {
-    flex: auto;
     padding: 9px;
     font-size: 24px;
     text-align: center;
@@ -69,13 +77,17 @@ body {
     justify-content: space-around;
 }
 
-.nav ul li:hover {
-    background-color: rgb(10, 5, 53);
+.nav .link-item:hover {
+    background-color: rgb(11, 6, 59);
+}
+
+.button-menu {
+    display: none;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 75% 25%;
 }
 
 .container .article {
@@ -120,7 +132,7 @@ body {
 
 /*grid*/
 .container .aside {
-    margin: .5%;
+    margin: 1%;
     background-color: rgb(65, 87, 87);
     display: grid;
     place-items: center;
@@ -137,6 +149,7 @@ body {
 .aside .aside2,
 .aside .aside3 {
     padding: 20px;
+    margin: 5px;
     text-align: center;
     justify-content: center;
 }
@@ -162,38 +175,134 @@ footer {
     margin: 20px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .logo img {
         height: 250px;
     }
 
-    .container .aside {
-        width: 99%;
-        display: flex;
-        flex-direction: row;
+    
+
+    .container  {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-template-areas: "main" "aside";
     }
 
     .aside1,
     .aside2,
     .aside3 {
-        width: 33%;
+        margin: 2vh;
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 527px) {
     body {
         padding-top: 0;
     }
 
-    .nav ul {
-        flex-direction: column;
-        align-content: flex-start;
-    }
+    .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin-left: -100%;
+        transition: all .2s linear;
+        background-color: rgba(0,0,0,.7);
+        z-index: 100;
+      }
+      
+    .nav.show{
+        margin-left: 0;
+      }
 
-    .nav ul li {
+    .menu {
+        background-color: rgb(250, 250, 250, 0.95);
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    
+    .header-home .nav a {
+        color: hsl(237, 35%, 22%);
+      }
+
+    .link-item {
+        margin-top: 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+      }
+      
+    .link-item::after {
+        position: absolute;
+        content: "";
         background-color: black;
-    }
+        bottom: -5px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        transition: 0.3s ease all;
+      }
+      
+    .link-item:hover::after {
+        width: 100%;
+      }
+
+    .button-menu {
+        z-index: 200;
+        width: 60px;
+        height: 60px;
+        border: none;
+        display: flex;
+        background: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+    .button-menu span {
+        width: 37px;
+        height: 4px;
+        bottom: 400%;
+        left: 30%;
+        margin-bottom: 5.5px;
+        position: relative;
+        background: #ffffff;
+        border-radius: 2.5px;
+        transform-origin: 4px 0px;
+        transition: all 0.2s linear;
+      }
+     
+     .button-menu span:hover {
+        background: rgba(241, 237, 237, 0.7);   
+     }
+
+     .button-menu.close span:hover {
+        background: hsl(237, 35%, 22%)
+     }
+
+     .button-menu.close span {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 0px);
+        transition: all 0.5s linear;
+        background: hsl(237, 35%, 22%);
+        left: 650%;
+      }
+      
+     .button-menu.close span:nth-child(2) {
+        transform: rotate(-45deg) translate(-9px, 6px);
+        transition: all 0.5s linear;
+      }
+      
+     .button-menu.close span:nth-child(3) {
+        display: none;
+      }
 
     .header-home .nav,
     .header-paginas .nav {
@@ -217,6 +326,8 @@ footer {
         font-size: 3.5rem;
     }
 
+
+
     .section-info1 {
         font-size: 2em;
         letter-spacing: 6px;
@@ -227,8 +338,14 @@ footer {
         height: 150px;
     }
 
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 70% 30%;
+    }
+
     .container .article .info {
         padding: 5px;
-        padding-left: 25%;
+        
     }
 }
