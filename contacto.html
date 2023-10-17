@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>FormContacto</title>
+    <style>
+        * {
+            font-family: Verdana;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header-home">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo de la empresa">
+        </div>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#">Menu1</a></li>
+                <li><a href="paginas/menu2.html">Menu2</a></li>
+                <li><a href="paginas/menu3.html">Menu3</a></li>
+                <li><a href="paginas/menu4.html">Menu4</a></li>
+                <li><a href="paginas/menu5.html">Menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor del formulario (para centrarlo) -->
+    <div id="form-container">
+        <form name="contacto">
+            <table>
+                <tr>
+                    <td>Nombre: </td>
+                    <td><input type="text" name="nombre" size="30" maxlength="100"></td>
+                </tr>
+                <tr>
+                    <td>Apellido: </td>
+                    <td><input type="text" name="apellido" size="30" maxlength="100"></td>
+                    <tr>
+                        <td>Documento: </td>
+                        <td><input type="text" name="dni" size="30" maxlength="100"></td>
+                    </tr>
+          
+                    <tr>
+                        <td>Telefono: </td>
+                        <td><input type="text" name="telefono" size="30" maxlength="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Mail: </td>
+                        <td><input type="text" name="email" size="30" maxlength="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de nacimiento: </td>
+                        <td><input type="date" name="fechaNacimiento"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Asistencia: </td>
+                        <td><input type="date" name="fechaasiste"></td>
+                    </tr>
+                    <tr>
+                        <td>Sexo:</td>
+                        <td>
+                            <select name="sexo">
+                                <option value="Elegir">Elegir</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Marca:</td>
+                        <td>
+                            <select name="marca">
+                                <option value="Elegir">Elegir</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mercedez Benz">Mercedez Benz</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Audi">Audi</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Porche">Porche</option>
+                                <option value="Lamborghini">Lamborghini</option>
+                                <option value="Fiat">Fiat</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <td colspan="2" align="center">
+                        <input type="button" value="Enviar" onclick="valida_envia();buro();">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- Barra lateral (aside) -->
+    <aside class="aside">
+        <div class="aside1">
+            <h3>Evento...</h3>
+            <a href="https://www.autoclasica.com/" target="_blank">
+                <img src="img/link_publi.png" alt="Enlace a eventos">
+            </a>
+        </div>
+        <hr>
+        <div class="aside2">
+            <h3>Revistas...</h3>
+            <a href="https://www.example.com/revistas" target="_blank">
+                <img src="img/imagen4_aside.jpg" alt="Enlace a revistas">
+            </a>
+        </div>
+        <hr>
+        <div class="aside3">
+            <h3>Video...</h3>
+            <a href="https://www.example.com/videos" target="_blank">
+                <img src="img/imagen4_aside.jpg" alt="Enlace a videos">
+            </a>
+        </div>
+    </aside>
+</body>
+</html>
