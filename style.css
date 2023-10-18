@@ -374,4 +374,17 @@ footer {
         padding: 5px;
 
     }
+
+    /menu2 form contacto/
+#form-container {
+    border: 5px solid black;
+    border-radius: 1%;
+    height: 400px;
+    width: 550px;
+    margin: 4% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
 }
