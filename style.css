@@ -267,7 +267,7 @@ footer {
         padding-top: 0;
     }
 
-    .nav {
+    .header-paginas,.nav {
         position: fixed;
         top: 0;
         left: 0;
@@ -279,11 +279,11 @@ footer {
         z-index: 100;
     }
 
-    .nav.show {
+    .header-paginas, .nav.show {
         margin-left: 0;
     }
 
-    .menu {
+    .header-paginas, .nav .menu {
         background-color: rgb(250, 250, 250, 0.95);
         display: flex;
         flex-direction: column;
@@ -293,8 +293,9 @@ footer {
         justify-content: flex-start;
     }
 
-    .header-home .nav a {
-        color: hsl(237, 35%, 22%);
+    .header-home .nav a,
+    .header-paginas .nav a {
+        color: hsl(237, 63%, 29%);
     }
 
     .link-item {
@@ -319,6 +320,11 @@ footer {
         width: 100%;
     }
 
+    .nav .link-item:hover {
+        background-color: hsl(237, 63%, 29%);
+        color: whitesmoke;
+    }
+
     .button-menu {
         z-index: 200;
         width: 60px;
@@ -332,11 +338,35 @@ footer {
         cursor: pointer;
     }
 
-    .button-menu span {
+    .header-paginas, .button-menu {
+        z-index: 200;
+        width: 60px;
+        height: 60px;
+        border: none;
+        display: flex;
+        background: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .header-home .button-menu span {
         width: 37px;
         height: 4px;
-        bottom: 400%;
-        left: 30%;
+        bottom: 780%;
+        margin-bottom: 5.5px;
+        position: relative;
+        background: #ffffff;
+        border-radius: 2.5px;
+        transform-origin: 4px 0px;
+        transition: all 0.2s linear;
+    }
+
+    .header-paginas .button-menu span {
+        width: 37px;
+        height: 4px;
+        bottom: 290%;
         margin-bottom: 5.5px;
         position: relative;
         background: #ffffff;
@@ -350,20 +380,30 @@ footer {
     }
 
     .button-menu.close span:hover {
-        background: hsl(237, 35%, 22%)
+        background: hsl(237, 35%, 22%);
     }
 
-    .button-menu.close span {
+    .header-home .button-menu.close span {
         opacity: 1;
         transform: rotate(45deg) translate(0px, 0px);
-        transition: all 0.5s linear;
+        transition: all 0.3s linear;
         background: hsl(237, 35%, 22%);
-        left: 650%;
+        bottom: 780%;
+        left: 750%;
+    }
+
+    .header-paginas .button-menu.close span {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 0px);
+        transition: all 0.3s linear;
+        background: hsl(237, 35%, 22%);
+        bottom: 430%;
+        left: 750%;
     }
 
     .button-menu.close span:nth-child(2) {
         transform: rotate(-45deg) translate(-9px, 6px);
-        transition: all 0.5s linear;
+        transition: all 0.3s linear;
     }
 
     .button-menu.close span:nth-child(3) {
@@ -375,19 +415,25 @@ footer {
         background-color: rgba(0, 0, 0, 0);
     }
 
-    .header-home .nav {
+    .header-home .nav,
+    .header-paginas .nav {
         margin-top: .5%;
     }
 
     .logo img {
         height: 150px;
+        margin: 0.2rem 1rem 0.5rem 3rem;
     }
 
-    .header-home h1 {
+    .header-home .header-paginas {
         font-size: 2.5rem;
     }
 
-
+    h1 {
+        padding: 2rem;
+        font-weight: 600;
+        font-size: 4vh;
+    }
     .section-info1 {
         color: black;
         text-shadow: none;

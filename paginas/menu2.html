@@ -3,22 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="funciones.js"></script>
+    <script src="/funciones.js"></script>
     <link rel="stylesheet" href="../style.css">
     <title>Formulario de Contacto</title>
 </head>
 
 <body>
     <header class="header-paginas">
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="">Contacto</a></li>
-                <li><a href="menu3.html">Mapa</a></li>
-                <li><a href="menu4.html">Galeria</a></li>
-                <li><a href="menu5.html">Historia</a></li>
-            </ul>
+        <nav id="nav" class="nav">
+            <div class="menu">
+                <a class="link-item" href="../index.html">Inicio</a>
+                <a class="link-item" >Contacto</a>
+                <a class="link-item" href="menu3.html">Mapa</a>
+                <a class="link-item" href="menu4.html">Galeria</a>
+                <a class="link-item" href="menu5.html">Historia</a>
+            </div>
         </nav>
+        <div class="logo"><img src="img/logo.jpg" alt=""></div>
+        <button id="button-menu" class="button-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <section class="formulario">
         <h1>Formulario de Contacto</h1>
@@ -83,7 +89,7 @@
                             </select>
                         </td>
                     </tr>
-                    <td colspan="2" align="center">
+                    <td colspan="2" align="center" style="bottom: 1rem;">
                         <input type="button" value="Enviar" onclick="valida_envia();buro();">
                     </td>
                     </tr>
@@ -91,6 +97,7 @@
             </form>
         </div>
     </section>
+    <script src="/index.js"></script>
 </body>
 <footer>
     <p>&copy; copyright 2023</p>
