@@ -32,12 +32,6 @@ h3 {
 
 }
 
-/*
-.header-home .logo {
-    margin-left: 7%;
-    margin-top: 7%;
-}*/
-
 .logo img {
     height: 300px;
     border: 12px solid rgb(2, 2, 92);
@@ -185,18 +179,12 @@ footer {
     margin: 5px;
 }
 
-#form-container,
-.mapa,
-.galeria,
-.historia {
-    margin: 20px;
-}
-
 /*menu2 form contacto*/
 .formulario h1 {
     text-align: center;
     margin: 3% auto;
-    font-size: 1.5rem;
+    margin-top: -200px;
+    font-size: 2.3rem;
 }
 
 #form-container {
@@ -204,7 +192,8 @@ footer {
     border-radius: 1%;
     height: 400px;
     width: 550px;
-    margin: 4% auto;
+    margin: 100px auto 80px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,14 +221,17 @@ footer {
 /*menu3 iframe*/
 .mapa {
     text-align: center;
-    margin: 3% auto;
     font-size: 1.5rem;
+}
+
+.mapa h1 {
+    margin-top: -200px;
 }
 
 #container-map {
     height: 480px;
     width: 480px;
-    margin: 4% auto;
+    margin: 60px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,7 +242,7 @@ footer {
 }
 
 .como-llegar {
-    margin: 2% 15% 7%;
+    margin-bottom: 80px;
     display: flex;
 }
 
@@ -260,23 +252,24 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 8%;
+    padding-bottom: 80px;
     justify-content: center;
 }
 
 .p-h1 {
     font-size: 40px;
-    margin-left: 5%;
+    font-size: 2.3rem;
+    margin-left: 50px;
+    margin-top: -200px;
 }
 
 .p-h2 {
-    padding: 3%;
+    padding: 100px;
 }
 
 .p-h3 {
-    text-decoration: underline;
-    padding: 4%;
-    margin-bottom: 4%;
+    padding: 10px;
+    margin-bottom: 35px;
 }
 
 .gal {
@@ -284,6 +277,7 @@ footer {
     height: 220px;
     object-fit: cover;
     border: 3px solid rgb(180, 204, 226);
+    margin: 5px 30px;
 }
 
 .galeria {
@@ -298,15 +292,20 @@ footer {
 /*menu5 historia*/
 .historia {
     text-align: center;
-    font-size: 1.7rem;
-    margin-top: 5%;
+    font-size: 1.6rem;
+    margin-top: -200px;
+    margin-bottom: 80px;
+}
+
+.historia h1 {
+    padding-bottom: 80px;
 }
 
 .p-hist {
     border: 4px solid black;
     border-radius: 1%;
     padding: 40px;
-    margin: 7%;
+    margin: 90px;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
@@ -315,10 +314,8 @@ footer {
 @media screen and (max-width: 768px) {
 
     .logo img {
-        height: 250px;
+        height: 150px;
     }
-
-
 
     .container {
         display: grid;
@@ -326,16 +323,65 @@ footer {
         grid-template-areas: "main" "aside";
     }
 
+    .section-info1 {
+        font-size: 2em;
+    }
+
     .aside1,
     .aside2,
     .aside3 {
         margin: 2vh;
+    }
+
+    /*menu2 form contacto*/
+    .formulario h1 {
+        margin-top: -100px;
+    }
+
+    /*menu3 iframe*/
+    .mapa h1 {
+        margin-top: -100px;
+        margin-left: 160px;
+    }
+
+    /*menu4 galeria*/
+    .p-h1 {
+        margin-top: -100px;
+        margin-left: 100px;
+    }
+
+    .p-h2 {
+        padding: 70px;
+    }
+
+    .p-h3 {
+        padding: 30px;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    /*menu5 historia*/
+    .historia {
+        margin-top: -100px;
+    }
+
+    .historia h1 {
+        margin-top: 0;
+        margin-left: 120px;
+        padding-bottom: 0;
     }
 }
 
 @media screen and (max-width: 480px) {
     body {
         padding-top: 0;
+    }
+
+    .logo img {
+        height: 100px;
+        margin-left: 780px;
+        margin-top: 80px;
+        border: 6px solid rgb(2, 2, 92);
     }
 
     .header-paginas,
@@ -495,11 +541,6 @@ footer {
         margin-top: .5%;
     }
 
-    .logo img {
-        height: 150px;
-        margin: 0.2rem 1rem 0.5rem 3rem;
-    }
-
     .header-home .header-paginas {
         font-size: 2.5rem;
     }
@@ -515,11 +556,9 @@ footer {
     }
 
     .section-info1 {
-        text-shadow: none;
         font-size: 1.2em;
         letter-spacing: 6px;
     }
-
 
     .section-home-img {
         height: 150px;
@@ -579,5 +618,45 @@ footer {
         width: 450px;
         margin: 20% auto;
         font-size: 1rem;
+    }
+
+    .formulario h1 {
+        margin-top: 30px;
+    }
+
+    /*menu3 iframe*/
+    .mapa h1 {
+        margin: 60px auto 0 -30px;
+        text-align: center;
+    }
+
+    #container-map {
+        margin-top: 20px;
+    }
+
+
+    /*menu4 galeria*/
+    .p-h1 {
+        margin-top: 85px;
+        margin-left: 10px;
+    }
+
+    .p-h2 {
+        padding: 15px;
+    }
+
+    .p-h3 {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    /*menu5 historia*/
+    .historia {
+        margin-top: 80px;
+    }
+
+    .historia h1 {
+        margin-left: -40px;
     }
 }
