@@ -235,7 +235,7 @@ footer {
     align-items: center;
 }
 
-#iframe-map {
+.iframe-map {
     place-self: center;
 }
 
@@ -551,7 +551,7 @@ footer {
     }
 
     .header-home h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     h1 {
@@ -561,8 +561,8 @@ footer {
     }
 
     .section-info1 {
-        font-size: 1.2em;
-        letter-spacing: 6px;
+        font-size: 1em;
+        letter-spacing: 3px;
     }
 
     .section-home-img {
@@ -572,7 +572,7 @@ footer {
     .container {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 86% 14%;
+        grid-template-rows: 73% 27%;
     }
 
     .container .article .info {
@@ -581,7 +581,7 @@ footer {
 
     .container .aside {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -631,14 +631,19 @@ footer {
 
     /*menu3 iframe*/
     .mapa h1 {
-        margin: 80px auto 0 -30px;
+        margin: 100px auto 0 10px;
         text-align: center;
     }
 
     #container-map {
-        margin-top: 20px;
+        margin: -80px auto 0 10px;
     }
 
+    .iframe-map {
+        width: 280px;
+        height: 280px;
+        margin-left: -210px;
+    }
 
     /*menu4 galeria*/
     .p-h1 {
@@ -657,6 +662,12 @@ footer {
         margin-bottom: 0;
     }
 
+    .gal {
+        width: 290px;
+        height: 150px;
+        margin: 2px auto;
+    }
+
     /*menu5 historia*/
     .historia {
         margin-top: 80px;
@@ -665,5 +676,11 @@ footer {
     .historia h1 {
         margin-top: 100px;
         margin-left: -10px;
+    }
+
+    .p-hist {
+        padding: 10px;
+        margin: 40px 10px 10px;
+        font-size: 1rem;
     }
 }
