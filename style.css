@@ -19,7 +19,6 @@ h3 {
     text-align: center;
 }
 
-
 .header-home {
     background-image: url("img/Banner.png");
     background-size: cover;
@@ -29,11 +28,10 @@ h3 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
 }
 
 .logo img {
-    height: 300px;
+    height: 280px;
     border: 12px solid rgb(2, 2, 92);
     border-radius: 100%;
     margin-left: 15px;
@@ -377,9 +375,16 @@ footer {
         padding-top: 0;
     }
 
-    .logo img {
+    .header-paginas .logo img {
         height: 100px;
-        margin-left: 780px;
+        margin-left: 150px;
+        margin-top: 80px;
+        border: 6px solid rgb(2, 2, 92);
+    }
+
+    .header-home .logo img {
+        height: 100px;
+        margin-left: 30px;
         margin-top: 80px;
         border: 6px solid rgb(2, 2, 92);
     }
@@ -475,7 +480,7 @@ footer {
     .header-home .button-menu span {
         width: 37px;
         height: 4px;
-        bottom: 780%;
+        bottom: 500%;
         margin-bottom: 5.5px;
         position: relative;
         background: #ffffff;
@@ -509,8 +514,8 @@ footer {
         transform: rotate(45deg) translate(0px, 0px);
         transition: all 0.3s linear;
         background: hsl(237, 35%, 22%);
-        bottom: 780%;
-        left: 750%;
+        bottom: 500%;
+        left: 680%;
     }
 
     .header-paginas .button-menu.close span {
@@ -519,7 +524,7 @@ footer {
         transition: all 0.3s linear;
         background: hsl(237, 35%, 22%);
         bottom: 430%;
-        left: 750%;
+        left: 680%;
     }
 
     .button-menu.close span:nth-child(2) {
@@ -614,19 +619,19 @@ footer {
 
     /*menu2 form contacto*/
     #form-container {
-        height: 300px;
-        width: 450px;
-        margin: 20% auto;
+        height: 70%;
+        width: 95%;
+        margin: 50px auto 80px 10px;
         font-size: 1rem;
     }
 
     .formulario h1 {
-        margin-top: 30px;
+        margin-top: 80px;
     }
 
     /*menu3 iframe*/
     .mapa h1 {
-        margin: 60px auto 0 -30px;
+        margin: 80px auto 0 -30px;
         text-align: center;
     }
 
@@ -639,6 +644,7 @@ footer {
     .p-h1 {
         margin-top: 85px;
         margin-left: 10px;
+        font-size: 4vh;
     }
 
     .p-h2 {
@@ -657,6 +663,7 @@ footer {
     }
 
     .historia h1 {
-        margin-left: -40px;
+        margin-top: 100px;
+        margin-left: -10px;
     }
 }
