@@ -178,43 +178,26 @@ footer {
 }
 
 /*menu2 form contacto*/
-.formulario h1 {
+.main-form h1 {
     text-align: center;
-    margin: 3% auto;
     margin-top: -200px;
     font-size: 2.3rem;
 }
 
+.main-form {
+    margin: 0 auto;
+}
+
 #form-container {
-    border: 5px solid black;
-    border-radius: 1%;
-    height: 400px;
-    width: 550px;
-    margin: 100px auto 80px;
-    padding: 20px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    background-color: white;
 }
 
-#input-form {
-    font-size: 1.3rem;
-    border: 2px solid rgb(121, 119, 119);
-    border-radius: 5px;
-    width: 200px;
-    padding: 10px 30px;
-    margin-top: 8%;
-    text-align: center;
+.iframe-form {
+    place-self: center;
 }
-
-#input-form:hover {
-    border: 2px solid black;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 
 /*menu3 iframe*/
 .mapa {
@@ -227,8 +210,6 @@ footer {
 }
 
 #container-map {
-    height: 480px;
-    width: 480px;
     margin: 60px auto;
     display: flex;
     justify-content: center;
@@ -332,8 +313,8 @@ footer {
     }
 
     /*menu2 form contacto*/
-    .formulario h1 {
-        margin-top: -100px;
+    .main-form h1 {
+        margin: -100px auto 0 100px;
     }
 
     /*menu3 iframe*/
@@ -618,31 +599,38 @@ footer {
     }
 
     /*menu2 form contacto*/
-    #form-container {
-        height: 70%;
-        width: 95%;
-        margin: 50px auto 80px 10px;
-        font-size: 1rem;
+    .main-form h1 {
+        margin: 90px auto 0;
+        font-size: 1.3rem;
     }
 
-    .formulario h1 {
-        margin-top: 80px;
+    .iframe-form {
+        width: 410px;
+        height: 410px;
+        margin: 50px 10px 200px;
+
     }
 
     /*menu3 iframe*/
     .mapa h1 {
-        margin: 100px auto 0 10px;
-        text-align: center;
+        margin: 90px auto 0;
     }
 
     #container-map {
-        margin: -80px auto 0 10px;
+        margin: 10px auto 50px 0;
+    }
+
+    .mapa {
+        font-size: 1rem;
     }
 
     .iframe-map {
         width: 280px;
         height: 280px;
-        margin-left: -210px;
+    }
+
+    .como-llegar {
+        margin: 10px 10px 30px;
     }
 
     /*menu4 galeria*/
@@ -654,12 +642,13 @@ footer {
 
     .p-h2 {
         padding: 15px;
+        font-size: 3.5vh;
     }
 
     .p-h3 {
         padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 0;
+        margin: 20px 0 0 auto;
+        font-size: 3vh;
     }
 
     .gal {
@@ -674,8 +663,7 @@ footer {
     }
 
     .historia h1 {
-        margin-top: 100px;
-        margin-left: -10px;
+        margin: 100px 0 auto -10px;
     }
 
     .p-hist {

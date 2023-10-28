@@ -1,0 +1,54 @@
+/*menu2 form contacto*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Russo One', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.main-form {
+    border: 5px solid black;
+    border-radius: 1%;
+    width: 500px;
+    margin: 100px auto 80px;
+    padding: 30px 10px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+
+#input-form {
+    font-size: 1.3rem;
+    border: 2px solid rgb(121, 119, 119);
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px 30px;
+    margin-top: 8%;
+    text-align: center;
+}
+
+#input-form:hover {
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+
+    .main-form {
+        height: 400px;
+        width: 400px;
+        margin: 0;
+        padding: 0;
+        font-size: .8rem;
+    }
+
+    #input-form {
+        font-size: 1rem;
+        width: 150px;
+    }
+}
