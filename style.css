@@ -461,7 +461,7 @@ footer {
     .header-home .button-menu span {
         width: 37px;
         height: 4px;
-        bottom: 500%;
+        bottom: 470%;
         margin-bottom: 5.5px;
         position: relative;
         background: #ffffff;
@@ -495,8 +495,8 @@ footer {
         transform: rotate(45deg) translate(0px, 0px);
         transition: all 0.3s linear;
         background: hsl(237, 35%, 22%);
-        bottom: 500%;
-        left: 680%;
+        bottom: 480%;
+        left: 620%;
     }
 
     .header-paginas .button-menu.close span {
@@ -505,7 +505,7 @@ footer {
         transition: all 0.3s linear;
         background: hsl(237, 35%, 22%);
         bottom: 430%;
-        left: 680%;
+        left: 630%;
     }
 
     .button-menu.close span:nth-child(2) {
