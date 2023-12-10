@@ -121,7 +121,7 @@ document.getElementById('form-container').addEventListener('submit', function(ev
     const formData = new FormData(document.getElementById('contactForm'));
 
     // Realizar el envío utilizando fetch
-    fetch('http://Emiliano90.pythonanywhere.com/leads', {
+    fetch('https://Emiliano90.pythonanywhere.com/leads', {
     method: 'POST',
     body: formData
     })
