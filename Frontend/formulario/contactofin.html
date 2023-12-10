@@ -32,7 +32,7 @@
 
     <!-- Contenedor del formulario (para centrarlo) -->
     <div id="form-container">
-        <form name="contacto" action="http://127.0.0.1:5000/insertar" method="post" id="contactForm">
+        <form name="contacto" action="http://127.0.0.1:5000/leads" method="post" id="contactForm">
             <table>
                 <tr>
                     <td>Nombre: </td>
@@ -56,11 +56,11 @@
                     </tr>
                     <tr>
                         <td>Fecha de nacimiento: </td>
-                        <td><input type="date" name="fechaNacimiento"></td>
+                        <td><input type="date" name="fecha_nacimiento"></td>
                     </tr>
                     <tr>
                         <td>Fecha de Asistencia: </td>
-                        <td><input type="date" name="fechaasiste"></td>
+                        <td><input type="date" name="fecha_asiste"></td>
                     </tr>
                     <tr>
                         <td>Sexo:</td>
@@ -124,40 +124,5 @@
         </div>
     </aside>
 
-    <script>
-        document.getElementById('form-container').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir el envío por defecto del formulario
-            
-            // Obtener los datos del formulario
-            const formData = new FormData(document.getElementById('contactForm'));
-    
-            // Realizar el envío utilizando fetch
-            fetch('http://127.0.0.1:5000/insertar', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Ocultar formulario
-                    document.getElementById('form-container').style.display = 'none'; 
-                    // Mostrar el mensaje de "Datos enviados"
-                    document.getElementById('mensajeEnviado').style.display = 'block';
-                    
-                    // Reiniciar el formulario después de 2 segundos (puedes ajustar el tiempo)
-                    setTimeout(function() {
-                        // Ocultar formulario
-                        document.getElementById('contactForm').reset();
-                        document.getElementById('form-container').style.display = 'block'; 
-                        document.getElementById('mensajeEnviado').style.display = 'none';
-                    }, 2000);
-                } else {
-                    throw new Error('Error al enviar los datos');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script>
 </body>
 </html>

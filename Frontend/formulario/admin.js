@@ -1,5 +1,5 @@
 document.getElementById('btnTraerLeads').addEventListener('click', () => {
-    fetch('http://127.0.0.1:5000/leads')
+    fetch('http://Emiliano90.pythonanywhere.com/leads')
       .then(response => response.json())
       .then(datos => {
         console.log("datos", datos)
@@ -36,7 +36,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`http://127.0.0.1:5000/leads/${id}`, {
+    fetch(`http://Emiliano90.pythonanywhere.com/leads/${id}`, {
       method: 'PUT',
       body: formData
     })
@@ -47,11 +47,34 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
       setTimeout(function() {
         // Ocultar formulario
         document.getElementById('formularioContacto').reset();
-        document.getElementById('idInput').textContent; 
-        document.getElementById('detalleInput').textContent;
-        }, 2000);      
+        document.getElementById('idInput').value=''; 
+        document.getElementById('detalleInput').value='';
+        }, 1000);      
     })
     .catch(error => {
       console.error('Error al enviar los datos:', error);
     });
 });
+
+// document.getElementById('formularioContacto').addEventListener('submit', function(event) {
+//   event.preventDefault(); // Evitar el envío del formulario por defecto
+  
+//   // Obtener los valores de los campos
+//   const id = document.getElementById('idInput').value;
+
+//   fetch(`http://127.0.0.1:5000/leads/${id}`, {
+//     method: 'DELETE',
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log('Respuesta del servidor:', data);
+//     setTimeout(function() {
+//       document.getElementById('formularioContacto').reset();
+//       document.getElementById('idInput').value=''; 
+//       document.getElementById('detalleInput').value='';
+//       }, 2000);      
+//   })
+//   .catch(error => {
+//     console.error('Error al enviar los datos:', error);
+//   });
+// });
