@@ -1,5 +1,5 @@
 document.getElementById('btnTraerLeads').addEventListener('click', () => {
-    fetch('http://Emiliano90.pythonanywhere.com/leads')
+    fetch('https://Emiliano90.pythonanywhere.com/leads')
       .then(response => response.json())
       .then(datos => {
         console.log("datos", datos)
@@ -36,7 +36,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`http://Emiliano90.pythonanywhere.com/leads/${id}`, {
+    fetch(`https://Emiliano90.pythonanywhere.com/leads/${id}`, {
       method: 'PUT',
       body: formData
     })
