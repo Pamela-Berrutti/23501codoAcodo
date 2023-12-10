@@ -52,22 +52,22 @@ function valida_envia() {
     }
 
     // Valida la fecha de nacimiento
-    var fechaNacimiento = document.contacto.fechaNacimiento.value;
-    if (fechaNacimiento === "") {
+    var fecha_nacimiento = document.contacto.fecha_nacimiento.value;
+    if (fecha_nacimiento === "") {
         alert("Debe seleccionar una fecha de nacimiento.");
-        document.contacto.fechaNacimiento.focus();
+        document.contacto.fecha_nacimiento.focus();
         return false;
     }
 
         // Calcula la edad a partir de la fecha de nacimiento
-        var fechaNacimientoDate = new Date(fechaNacimiento);
+        var fecha_nacimientoDate = new Date(fecha_nacimiento);
         var fechaActual = new Date();
-        var edad = fechaActual.getFullYear() - fechaNacimientoDate.getFullYear();
+        var edad = fechaActual.getFullYear() - fecha_nacimientoDate.getFullYear();
     
         // Verifica si el cumpleaños ya ha ocurrido este año
         if (
-            fechaNacimientoDate.getMonth() > fechaActual.getMonth() ||
-            (fechaNacimientoDate.getMonth() === fechaActual.getMonth() && fechaNacimientoDate.getDate() > fechaActual.getDate())
+            fecha_nacimientoDate.getMonth() > fechaActual.getMonth() ||
+            (fecha_nacimientoDate.getMonth() === fechaActual.getMonth() && fecha_nacimientoDate.getDate() > fechaActual.getDate())
         ) {
             edad--;
         }
@@ -75,7 +75,7 @@ function valida_envia() {
         // Valida que la edad sea mayor o igual a 18
         if (edad < 18) {
             alert("Debe ser mayor o igual a 18 años para asistir al evento.");
-            document.contacto.fechaNacimiento.focus();
+            document.contacto.fecha_nacimiento.focus();
             return false;
         }
 
@@ -114,3 +114,36 @@ function buro() {
     let sexo = document.contacto.sexo.value;
     console.log(sexo);
 }
+document.getElementById('form-container').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el envío por defecto del formulario
+    
+    // Obtener los datos del formulario
+    const formData = new FormData(document.getElementById('contactForm'));
+
+    // Realizar el envío utilizando fetch
+    fetch('http://Emiliano90.pythonanywhere.com/leads', {
+    method: 'POST',
+    body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Ocultar formulario
+            document.getElementById('contactForm').style.display = 'none'; 
+            // Mostrar el mensaje de "Datos enviados"
+            // document.getElementById('mensajeEnviado').style.display = 'block';
+            
+            // Reiniciar el formulario después de 2 segundos (puedes ajustar el tiempo)
+            setTimeout(function() {
+            // Ocultar formulario
+            document.getElementById('form-container').reset();
+            document.getElementById('form-container').style.display = 'block'; 
+            // document.getElementById('mensajeEnviado').style.display = 'none';
+            }, 2000);
+        } else {
+            throw new Error('Error al enviar los datos');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
